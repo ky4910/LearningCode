@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>prompt</title>
+
+        <script type="text/javascript">
+            window.onunload = onunload_message;
+
+            function openWindow(){
+                // 新窗口打开时弹出确认框，是否打开
+                var message = confirm("Do you will open?");
+
+                // 通过输入对话框，确定打开的网址，默认为 http：//www.imooc.com/
+                //打开的窗口要求，宽400像素，高500像素，无菜单栏、无工具栏。
+
+                if(message == true) {
+                    var text = prompt("Input the url!");
+                    window.open(text, '_blank', width=400, hight=500);
+                }
+            }
+
+            function rec(){
+                var score; //score变量，用来存储用户输入的成绩值。
+                score =  prompt("input your score:");
+                if(score>=90) {
+                    document.write("你很棒!");
+                } else if(score>=75) {
+                    document.write("不错吆!");
+                } else if(score>=60) {
+                    document.write("要加油!");
+                } else {
+                    document.write("要努力了!");
+                }
+            }
+
+            function onunload_message(){
+                alert("Do you really go out?")
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <input name="button" type="button" onClick="openWindow()" value="新窗口打开网站!" />
+    </body>
+
+</html>

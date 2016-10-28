@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>prompt</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var main = document.body;
+
+            //Create link
+            function createHref(url, text){
+                var a = document.createElement("a");
+                a.href = url;
+                a.innerHTML = text;
+                a.style.color = "red";
+                main.appendChild(a);
+            }
+
+            createHref("http://www.imooc.com/", "慕课网");
+
+            function show(){
+                alert("Win or Go home!");
+            }
+        </script>
+        <input name="button" type="button" onClick="show()" value="Try it!" />
+    </body>
+
+</html>
